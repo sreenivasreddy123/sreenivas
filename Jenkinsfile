@@ -6,7 +6,7 @@ pipeline {
         stage ('Build Stage') {
 
             steps {
-			dir("/root/.jenkins/workspace/abc"){
+			dir("/root/.jenkins/workspace/pipeline9"){
 			sh 'mvn clean install'
             }
             }
@@ -17,7 +17,7 @@ pipeline {
 
             steps {
                 
-                    sh 'cp /root/.jenkins/workspace/abc/target/simple-web-app.war /opt/apache-tomcat-8.5.34/webapps '
+                    sh 'cp /root/.jenkins/workspace/pipeline9/target/simple-web-app.war /opt/apache-tomcat-8.5.34/webapps '
               
             }
         }
